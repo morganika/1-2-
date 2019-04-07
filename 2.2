@@ -1,0 +1,26 @@
+#include "pch.h"
+#include <iostream>
+#include <string>
+using namespace std;
+
+class point
+{
+private:
+	int x;
+	int y;
+public:
+	point(int valuex, int valuey)
+	{
+		x = valuex;
+		y = valuey;
+	}
+	void print() {
+		cout << "x = " << x << " \t y = " << y << endl;
+	}
+};
+	int main ()
+	{
+		point a(3,67);
+		a.print();
+        return 0;
+	}
