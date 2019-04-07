@@ -1,0 +1,50 @@
+#include "pch.h"
+#include <iostream>
+#include <string>
+using namespace std;
+
+class human
+{
+public:
+	int age;
+	double weight;
+	string name;
+};
+
+int main()
+{
+
+	setlocale(LC_ALL, "Rus");
+	human firsthuman;
+	firsthuman.age = 15;
+	firsthuman.weight = 43;
+	firsthuman.name = "Саня";
+
+
+	cout << firsthuman.age << endl;
+	cout << firsthuman.weight << endl;
+	cout << firsthuman.name << endl<<endl;
+
+	human secondhuman;
+	secondhuman.age = 25;
+	secondhuman.weight = 68;
+	secondhuman.name = "Александр";
+
+
+	cout << secondhuman.age << endl;
+	cout << secondhuman.weight << endl;
+	cout << secondhuman.name << endl<<endl;
+
+	human thirdhuman;
+	thirdhuman.age = 48;
+	thirdhuman.weight = 75;
+	thirdhuman.name = "Александр Сергеевич";
+
+
+	cout << thirdhuman.age << endl;
+	cout << thirdhuman.weight << endl;
+	cout << thirdhuman.name << endl;
+
+
+	return 0;
+}
