@@ -1,0 +1,27 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+class Point
+{
+public:
+	Point(int x, int y)
+	{
+		this->x = x;
+		this->y = y;
+	}
+	void foo()
+	{
+		cout << " x= " << this->x << "\n y= " << y << endl;
+	}
+private:
+	int x;
+	int y;
+};
+
+int main()
+{
+	Point a(15, 16);
+	a.foo();
+
+	return 0;
+}
