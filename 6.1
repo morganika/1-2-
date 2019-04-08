@@ -1,0 +1,44 @@
+
+#include "pch.h"
+#include <iostream>
+#include <string>
+using namespace std;
+
+class flover
+{
+	friend void cost(flover &);
+	friend void setPrice(flover &, int price);
+public:
+	flover(string Name, int Price)
+	{
+		name = Name;
+		price = Price;
+	}
+	string getName() { return name; }
+	int getPrice() { return price; }
+
+private:
+	string name;   
+	int price;  
+};
+
+void cost(flover &a)
+{
+	cout << a.name << " cost " << endl;
+}
+void setPrice(flover &a, int price)
+{
+	if (price > 0)
+		a.price = price;
+}
+
+int main()
+{
+	flover rouse("Roses", 50);
+	cost(rouse);
+	cout << rouse.getName() << " : " << rouse.getPrice() << endl;
+	setPrice(rouse, 80);
+	cout << rouse.getName() << " : " << rouse.getPrice() << endl;
+
+	return 0;
+}
