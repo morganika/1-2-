@@ -1,0 +1,32 @@
+#include "pch.h"
+#include <iostream>
+#include <string>
+using namespace std;
+
+class something
+{
+public:
+
+	static int count;
+
+	something(int number, string name)
+	{
+		this->number = number;
+		this->name = name;
+	}
+private:
+	int number;
+	string name;
+};
+
+int something::count = 1;
+
+int main ()
+	{
+		setlocale(LC_ALL, "Rus");
+
+		something something(10000, "Не Вася");
+		cout << something.count << endl;
+		
+		return 0;
+	}
