@@ -1,0 +1,48 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+
+class Point{
+
+private:
+	int x;
+	int y;
+
+public:
+
+	Point()
+	{
+		x = 0;
+		y = 0;
+		cout << this << "    constructor" << endl;
+	}
+	Point(int valueX, int valueY) 
+	{
+		x = valueX;
+		y = valueY;
+		cout << this << "    constructor" << endl;
+	}
+	bool operator ==(const Point & other)
+	{
+		if (this->x == other.x && this->y == other.y)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+		
+};
+
+	int main() {
+		setlocale(LC_ALL, "ru");
+
+		Point a(3,2);
+		Point b(8,4);
+		
+		bool result = a == b;
+
+		return 0;
+	}
