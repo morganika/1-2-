@@ -1,0 +1,44 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+
+class Point{
+
+private:
+	int x;
+	int y;
+
+public:
+
+	Point()
+	{
+		x = 0;
+		y = 0;
+		cout << this << "    constructor" << endl;
+	}
+	Point(int valueX, int valueY) 
+	{
+		x = valueX;
+		y = valueY;
+		cout << this << "    constructor" << endl;
+	}
+
+	Point operator +(const Point &other)
+	{
+		Point temp;
+		temp.x = this->x + other.x;
+		temp.y = this->y + other.y;
+		return temp;
+		}
+};
+
+	int main() {
+		setlocale(LC_ALL, "ru");
+
+		Point a(5,1);
+		Point b(8,4);
+		Point c=a+b;
+		
+
+		return 0;
+	}
