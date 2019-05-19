@@ -1,0 +1,38 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+
+class food
+{
+public:
+	string name;
+};
+
+class fruit :public food
+{
+public:
+	string group;
+		void learn()
+	{
+		cout << "Я фрукт " << endl;
+	}
+};
+
+class whichone :public	fruit
+{
+public:
+	void learn()
+	{
+		cout << "Расту на дереве" << endl;
+	}
+};
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	fruit st;
+	st.learn();
+	whichone extrast;
+	extrast.learn();
+	return 0;
+
+}
