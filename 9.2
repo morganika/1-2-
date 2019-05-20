@@ -1,0 +1,41 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+
+class Cats
+{
+public:
+	virtual void voice() = 0;
+};
+
+class cat : public Cats
+{
+public:
+	virtual void voice()
+	{
+		cout << "Мурр" << endl;
+	}
+};
+
+class kitty : public cat 
+{
+public: void voice()
+{
+	cout << "мяу мяу" << endl;
+}
+
+};
+
+int main()
+{
+	setlocale(LC_ALL, "ru");
+
+	cat THECAT;
+	kitty kitten;
+
+	cat *cats = &kitten;
+
+	cats->voice();
+	
+	return 0;
+}
